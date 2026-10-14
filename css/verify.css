@@ -95,16 +95,19 @@
   font-weight: 600;
 }
 
-/* Action row */
+/* Action row — stacked so the primary CTA is full-width and prominent */
 .vcard__actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: stretch;
+  margin-inline: auto;
+  max-width: 320px;
 }
 
 .vcard__actions .btn {
-  min-width: 190px;
+  width: 100%;
+  justify-content: center;
 }
 
 /* Helper link under the actions */
@@ -147,10 +150,6 @@
 /* Responsive */
 @media (max-width: 480px) {
   .vcard__actions {
-    flex-direction: column;
-  }
-
-  .vcard__actions .btn {
-    width: 100%;
+    max-width: 100%;
   }
 }
