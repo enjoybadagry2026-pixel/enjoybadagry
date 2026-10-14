@@ -282,6 +282,7 @@ button {
 }
 
 .section__lede {
+  margin-top: 1rem;
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 60ch;
@@ -289,10 +290,6 @@ button {
 
 .section__lede--narrow {
   max-width: 46ch;
-}
-
-.section__head--center .section__lede {
-  margin-top: 1rem;
 }
 
 /* ============================================================
@@ -551,6 +548,10 @@ button {
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(2.5rem, 6vw, 5rem);
   align-items: center;
+}
+
+.about__copy .section__title + .section__lede {
+  margin-top: 1rem;
 }
 
 .about__copy .section__lede + .section__lede {
