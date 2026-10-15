@@ -237,10 +237,9 @@
       var showing = input.type === "text";
       input.type = showing ? "password" : "text";
       btn.setAttribute("aria-label", showing ? "Show password" : "Hide password");
-      var eye = btn.querySelector(".icon-eye");
-      var eyeOff = btn.querySelector(".icon-eye-off");
-      if (eye) eye.hidden = !showing;
-      if (eyeOff) eyeOff.hidden = showing;
+      // SVG elements ignore the `hidden` attribute/property, so visibility
+      // of .icon-eye / .icon-eye-off is driven by this class (see reset.css).
+      btn.classList.toggle("is-revealed", !showing);
     });
   });
 

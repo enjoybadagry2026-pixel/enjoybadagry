@@ -219,6 +219,21 @@
   color: var(--ink);
 }
 
+/* Icon visibility: the HTML `hidden` attribute/IDL property does not apply
+   to inline <svg> elements (it exists only on HTMLElement), so eye/eye-off
+   are switched with an author class instead. */
+.rform__toggle .icon-eye-off {
+  display: none;
+}
+
+.rform__toggle.is-revealed .icon-eye {
+  display: none;
+}
+
+.rform__toggle.is-revealed .icon-eye-off {
+  display: block;
+}
+
 .rform__hint {
   margin-top: 0.35rem;
   font-size: 0.82rem;
