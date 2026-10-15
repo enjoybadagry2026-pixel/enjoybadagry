@@ -7,16 +7,19 @@
 
   <title>Enjoy Badagry — Explore. Experience. Enjoy. | Discover Badagry, Lagos</title>
   <meta name="description" content="Enjoy Badagry helps you explore destinations, find hotels, order local food, book rides and discover events and tours in Badagry, Lagos — all from one platform." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://enjoybadagry.online/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Enjoy Badagry — Explore. Experience. Enjoy." />
   <meta property="og:description" content="Discover the rich history, vibrant culture and breathtaking beauty of Badagry. Destinations, hotels, food, rides, events and tours — one platform." />
-  <meta property="og:image" content="images/hero-beach.jpg" />
+  <meta property="og:url" content="https://enjoybadagry.online/" />
+  <meta property="og:image" content="https://enjoybadagry.online/images/hero-beach.jpg" />
   <meta property="og:locale" content="en_NG" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Enjoy Badagry — Explore. Experience. Enjoy." />
   <meta name="twitter:description" content="Discover destinations, hotels, food, rides, events and tours in Badagry, Lagos." />
-  <meta name="twitter:image" content="images/hero-beach.jpg" />
+  <meta name="twitter:image" content="https://enjoybadagry.online/images/hero-beach.jpg" />
 
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="apple-touch-icon" href="images/favicon.png" />
@@ -29,6 +32,41 @@
   />
 
   <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://enjoybadagry.online/#website",
+        "url": "https://enjoybadagry.online/",
+        "name": "Enjoy Badagry",
+        "description": "Enjoy Badagry helps you explore destinations, find hotels, order local food, book rides and discover events and tours in Badagry, Lagos — all from one platform.",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://enjoybadagry.online/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://enjoybadagry.online/#organization",
+        "name": "Enjoy Badagry",
+        "url": "https://enjoybadagry.online/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://enjoybadagry.online/images/logo-dark.png",
+          "width": 273,
+          "height": 161
+        },
+        "description": "Enjoy Badagry helps people explore destinations, enjoy local food and drinks, find places to stay and book car rides in Badagry, Lagos.",
+        "founder": {
+          "@id": "https://enjoybadagry.online/about-owner/#kingnewman"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -142,6 +180,10 @@
                 Events, tour packages and in-app support
               </li>
             </ul>
+            <a class="link-arrow reveal" href="about-owner/">
+              Meet Kingnewman, the founder behind Enjoy Badagry
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
           </div>
 
           <div class="about__cards reveal" aria-label="What you can do with Enjoy Badagry">
@@ -884,6 +926,7 @@
         <h3 class="footer__heading">Platform</h3>
         <ul class="footer__links" role="list">
           <li><a href="#about">About</a></li>
+          <li><a href="about-owner/">Meet the Founder</a></li>
           <li><a href="#explore">Explore Badagry</a></li>
           <li><a href="#offer">What We Offer</a></li>
           <li><a href="#why">Why Enjoy Badagry</a></li>
