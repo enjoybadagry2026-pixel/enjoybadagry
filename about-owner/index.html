@@ -12,15 +12,18 @@
   <link rel="canonical" href="https://enjoybadagry.online/about-owner/" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Enjoy Badagry" />
   <meta property="og:title" content="Kingnewman — The Founder Behind Enjoy Badagry" />
   <meta property="og:description" content="Why Kingnewman built Enjoy Badagry — and why he wants you to experience, enjoy, and fall in love with Badagry." />
   <meta property="og:url" content="https://enjoybadagry.online/about-owner/" />
   <meta property="og:image" content="https://enjoybadagry.online/images/kingnewman-1.jpg" />
+  <meta property="og:image:alt" content="Kingnewman, founder of Enjoy Badagry" />
   <meta property="og:locale" content="en_NG" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kingnewman — The Founder Behind Enjoy Badagry" />
   <meta name="twitter:description" content="Why Kingnewman built Enjoy Badagry — and why he wants you to experience, enjoy, and fall in love with Badagry." />
   <meta name="twitter:image" content="https://enjoybadagry.online/images/kingnewman-1.jpg" />
+  <meta name="twitter:image:alt" content="Kingnewman, founder of Enjoy Badagry" />
 
   <link rel="icon" type="image/png" href="../images/favicon.png" />
   <link rel="apple-touch-icon" href="../images/favicon.png" />
@@ -40,6 +43,14 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://enjoybadagry.online/#website",
+        "url": "https://enjoybadagry.online/",
+        "name": "Enjoy Badagry",
+        "publisher": { "@id": "https://enjoybadagry.online/#organization" },
+        "inLanguage": "en"
+      },
+      {
         "@type": "Person",
         "@id": "https://enjoybadagry.online/about-owner/#kingnewman",
         "name": "Kingnewman",
@@ -56,8 +67,14 @@
         "@id": "https://enjoybadagry.online/#organization",
         "name": "Enjoy Badagry",
         "url": "https://enjoybadagry.online/",
-        "logo": "https://enjoybadagry.online/images/logo-dark.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://enjoybadagry.online/images/logo-dark.png",
+          "width": 273,
+          "height": 161
+        },
         "description": "Enjoy Badagry helps people explore destinations, enjoy local food and drinks, find places to stay and book car rides in Badagry, Lagos.",
+        "email": "support@enjoybadagry.online",
         "founder": {
           "@id": "https://enjoybadagry.online/about-owner/#kingnewman"
         }

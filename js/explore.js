@@ -101,7 +101,7 @@
     if (score) meta.appendChild(createElement("span", "live-card__rating", score));
 
     body.appendChild(meta);
-    body.appendChild(createElement("h4", "live-card__title", text(item.name, "Enjoy Badagry listing")));
+    body.appendChild(createElement("h3", "live-card__title", text(item.name, "Enjoy Badagry listing")));
 
     var subtitle = "";
     if (type === "food") {

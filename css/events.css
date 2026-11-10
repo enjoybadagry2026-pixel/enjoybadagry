@@ -1,0 +1,46 @@
+/* Enjoy Badagry — events and tours page */
+.events-hero{position:relative;min-height:min(680px,78vh);display:grid;align-items:end;overflow:hidden;background:var(--forest-deep);color:var(--on-dark)}
+.events-hero__image,.events-hero::after{position:absolute;inset:0}
+.events-hero__image{background:url("../images/sunset-beach.jpg") center 42% / cover no-repeat;transform:scale(1.02)}
+.events-hero::after{content:"";background:linear-gradient(90deg,rgba(7,53,39,.94),rgba(7,53,39,.42) 65%,rgba(7,53,39,.2)),linear-gradient(0deg,rgba(7,53,39,.72),transparent 58%)}
+.events-hero__content{position:relative;z-index:1;padding-block:clamp(7.5rem,18vw,12rem) clamp(4rem,9vw,7rem)}
+.events-hero__eyebrow,.events-cta__eyebrow{color:var(--gold)}
+.events-hero__title{max-width:760px;font-size:clamp(3rem,8vw,6.2rem);letter-spacing:-.045em}
+.events-hero__lede{max-width:610px;margin-top:1.5rem;color:var(--on-dark-muted);font-size:clamp(1.05rem,2vw,1.25rem)}
+.events-hero__actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.events-intro{background:var(--cream)}
+.tour-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1.2rem}
+.tour-card{display:flex;min-width:0;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--paper);box-shadow:var(--shadow-card);transition:transform .28s var(--ease-out),box-shadow .28s var(--ease-out)}
+.tour-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-pop)}
+.tour-card__media{aspect-ratio:1.15;overflow:hidden;background:var(--sand)}
+.tour-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+.tour-card:hover .tour-card__media img{transform:scale(1.05)}
+.tour-card__body{display:flex;flex:1;flex-direction:column;padding:1.5rem}
+.tour-card__number{color:var(--sunset);font-family:var(--font-display);font-size:1.5rem;font-weight:600}
+.tour-card .eyebrow{margin-top:.65rem;color:var(--sunset)}
+.tour-card h3{margin-top:.35rem;color:var(--forest-deep);font-size:clamp(1.55rem,2.4vw,2.15rem)}
+.tour-card p:not(.eyebrow){margin-top:.75rem;color:var(--muted);font-size:.92rem}
+.tour-card .link-arrow{margin-top:1.3rem}
+.day-builder{background:var(--sand)}
+.day-builder__grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2.5rem,8vw,7rem);align-items:center}
+.day-builder__copy>p:not(.eyebrow){max-width:520px;margin-top:1.2rem;color:var(--muted)}
+.day-builder__actions{display:flex;align-items:center;flex-wrap:wrap;gap:1.25rem;margin-top:1.75rem}
+.day-builder__steps{display:grid;gap:1rem}
+.day-builder__steps li{display:grid;grid-template-columns:54px 1fr;gap:1rem;padding:1.25rem;border:1px solid rgba(11,77,58,.14);border-radius:var(--radius-md);background:rgba(255,255,255,.62)}
+.day-builder__steps span{color:var(--sunset);font-family:var(--font-display);font-size:1.35rem;font-weight:600}
+.day-builder__steps strong{color:var(--forest-deep);font-family:var(--font-display);font-size:1.2rem}
+.day-builder__steps p{margin-top:.2rem;color:var(--muted);font-size:.92rem}
+.experience-note{background:var(--paper)}
+.experience-note__grid{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);gap:clamp(2rem,8vw,7rem);align-items:center}
+.experience-note__image{height:clamp(360px,52vw,600px);overflow:hidden;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft)}
+.experience-note__image img{width:100%;height:100%;object-fit:cover;object-position:center 54%}
+.experience-note__copy>p:not(.eyebrow){max-width:570px;margin-top:1.2rem;color:var(--muted)}
+.experience-note__copy .btn{margin-top:1.75rem}
+.events-cta{padding-block:clamp(3.5rem,7vw,5.5rem);background:var(--forest);color:var(--on-dark)}
+.events-cta__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.events-cta h2{max-width:650px;font-size:clamp(2rem,4vw,3.2rem)}
+.events-cta p:not(.eyebrow){max-width:600px;margin-top:.8rem;color:var(--on-dark-muted)}
+.events-cta__actions{display:flex;flex-wrap:wrap;gap:.75rem;flex-shrink:0}
+@media(max-width:920px){.tour-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tour-card--feature{grid-column:span 2}.day-builder__grid,.experience-note__grid{grid-template-columns:1fr}.experience-note__image{height:clamp(300px,60vw,500px)}.events-cta__inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:640px){.events-hero__actions,.events-hero__actions .btn,.events-cta__actions,.events-cta__actions .btn{width:100%}.tour-grid{grid-template-columns:1fr}.tour-card--feature{grid-column:auto}.tour-card__media{aspect-ratio:1.35}.day-builder__actions{align-items:stretch;flex-direction:column}.day-builder__actions .btn{width:100%}.experience-note__image{height:390px}}
+@media(prefers-reduced-motion:reduce){.tour-card,.tour-card__media img{transition:none}}
