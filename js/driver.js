@@ -33,20 +33,28 @@
       status.textContent = 'Your browser cannot securely prepare this application. Please use a current browser or contact support.';
       return;
     }
-    var payload = {};
-    fields.forEach(function (name) { payload[name] = form.elements[name].value; });
-    payload.consent = form.elements.consent.checked;
-    payload.idempotencyKey = key;
+    var payload = new FormData();
+    fields.forEach(function (name) { payload.append(name, form.elements[name].value); });
+    payload.append('consent', 'true');
+    payload.append('idempotencyKey', key);
+    Array.prototype.forEach.call(form.querySelectorAll('input[type="file"][name="documents"]'), function (input) {
+      if (input.files[0]) { payload.append('documents', input.files[0]); payload.append('documentTypes', input.getAttribute('data-document-type')); }
+    });
     submitting = true;
     button.disabled = true;
     button.textContent = 'Submitting…';
     status.textContent = 'Submitting your application…';
     try {
-      var response = await fetch('https://api.enjoybadagry.online/api/driver-applications', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+      var response = await new Promise(function (resolve, reject) {
+        var request = new XMLHttpRequest();
+        request.open('POST', 'https://api.enjoybadagry.online/api/driver-applications');
+        request.upload.onprogress = function (event) { if (event.lengthComputable) status.textContent = 'Uploading documents… ' + Math.round(event.loaded / event.total * 100) + '%'; };
+        request.onerror = function () { reject(new Error('Network error')); };
+        request.onload = function () { resolve(request); };
+        request.send(payload);
       });
       var result;
-      try { result = await response.json(); } catch (error) { result = null; }
+      try { result = JSON.parse(response.responseText); } catch (error) { result = null; }
       if (response.status === 422) {
         status.textContent = 'Please check your details, including phone numbers and email, and try again.';
         return;

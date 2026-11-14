@@ -80,7 +80,7 @@
       </div>
     </div></section>
     <section class="section driver-section driver-section--sand" id="application" aria-labelledby="application-title"><div class="container driver-layout">
-      <div><p class="eyebrow">Your application</p><h2 class="section__title" id="application-title">Tell us about yourself</h2><p class="section__lede">Have your contact, licence status and vehicle information ready. Fields marked optional may be left blank.</p><p>Please do not include identity numbers, passwords, banking details or documents in this form. Further verification is separate.</p></div>
+       <div><p class="eyebrow">Your application</p><h2 class="section__title" id="application-title">Tell us about yourself</h2><p class="section__lede">Have your contact, licence status, vehicle information and the required documents ready. Files must be clear JPEG, PNG, WebP or PDF files up to 10MB each.</p><p>Only upload the documents requested below. Do not include passwords or banking details.</p></div>
       <form class="driver-form" id="driver-form">
         <noscript><p>JavaScript is required to submit this application. Please contact <a href="../contact/">support</a> for help.</p></noscript>
         <fieldset><legend>Contact details</legend><div class="driver-grid">
@@ -97,9 +97,15 @@
           <label>Vehicle ownership <input name="vehicleOwnership" maxlength="100" placeholder="e.g. Own or access to a vehicle" required /></label>
           <label>Vehicle type (optional) <input name="vehicleType" maxlength="100" placeholder="e.g. Car" /></label>
           <label>Vehicle make and model (optional) <input name="vehicleMakeModel" maxlength="150" /></label>
-          <label>Vehicle registration (optional) <input name="vehicleRegistration" maxlength="100" /></label>
+           <label>Vehicle registration <input name="vehicleRegistration" maxlength="100" required /></label>
           <label>Operating area <input name="operatingArea" maxlength="200" required /></label>
           <label>Availability <input name="availability" maxlength="200" placeholder="e.g. Weekdays" required /></label>
+        </div></fieldset>
+        <fieldset><legend>Verification documents</legend><div class="driver-grid">
+          <label>Valid driver's licence <input type="file" name="documents" data-document-type="license" accept="image/jpeg,image/png,image/webp,application/pdf" required /><small>Required. Clear, current document.</small></label>
+          <label>Vehicle registration <input type="file" name="documents" data-document-type="vehicle_registration" accept="image/jpeg,image/png,image/webp,application/pdf" required /><small>Required where you provide a vehicle.</small></label>
+          <label>Insurance (optional) <input type="file" name="documents" data-document-type="insurance" accept="image/jpeg,image/png,image/webp,application/pdf" /></label>
+          <label>Roadworthiness (optional) <input type="file" name="documents" data-document-type="roadworthiness" accept="image/jpeg,image/png,image/webp,application/pdf" /></label>
         </div></fieldset>
         <fieldset><legend>Additional details</legend><div class="driver-grid driver-grid--single">
           <label>Professional driving experience (optional) <textarea name="professionalExperience" rows="3" maxlength="2000"></textarea></label>
@@ -112,7 +118,7 @@
       </form>
     </div></section>
     <section class="section driver-section" aria-labelledby="faq-title"><div class="container driver-faq"><p class="eyebrow">Good to know</p><h2 class="section__title" id="faq-title">Frequently asked questions</h2>
-      <details><summary>What do I need to apply?</summary><p>Provide your contact details, licence status, driving experience, vehicle information, operating area and availability. No document uploads are requested here.</p></details>
+       <details><summary>What do I need to apply?</summary><p>Provide your contact details, licence status, driving experience, vehicle information, operating area, availability and the requested verification documents.</p></details>
       <details><summary>Does applying guarantee approval?</summary><p>No. Applications are reviewed and approval is not guaranteed. Approved applicants will be contacted.</p></details>
       <details><summary>Does this create a driver account?</summary><p>No. Driver account/DRT setup and any further verification are separate from this application.</p></details>
       <details><summary>Need help with your application?</summary><p>Visit our <a href="../contact/">contact page</a> to reach support.</p></details>
@@ -122,7 +128,7 @@
     <div class="footer__brand"><img src="../images/logo-dark.png" alt="Enjoy Badagry" width="122" height="72" class="footer__logo" /><p class="footer__tagline">Explore. Experience. Enjoy.</p><p class="footer__desc">Enjoy Badagry helps you explore destinations, book rides, order food and find places to stay — all from one platform, focused on Badagry, Lagos.</p></div>
     <nav class="footer__col" aria-label="Footer — platform"><h3 class="footer__heading">Platform</h3><ul class="footer__links" role="list"><li><a href="../index.html#about">About</a></li><li><a href="../about-owner/">Meet the Founder</a></li><li><a href="../explore/">Explore Badagry</a></li><li><a href="../index.html#offer">What We Offer</a></li><li><a href="../index.html#faq">FAQ</a></li><li><a href="../contact/">Contact</a></li></ul></nav>
     <nav class="footer__col" aria-label="Footer — services"><h3 class="footer__heading">Services</h3><ul class="footer__links" role="list"><li><a href="../explore/">Destinations</a></li><li><a href="../index.html#offer">Hotels &amp; Stays</a></li><li><a href="../index.html#offer">Food &amp; Cuisine</a></li><li><a href="../index.html#offer">Rides</a></li><li><a href="../index.html#offer">Events</a></li><li><a href="../index.html#offer">Tour Packages</a></li></ul></nav>
-    <div class="footer__col"><h3 class="footer__heading">Get started</h3><ul class="footer__links" role="list"><li><a href="./" aria-current="page">Become a Driver</a></li><li><a href="mailto:support@enjoybadagry.online">support@enjoybadagry.online</a></li><li><a href="../contact/#channels">In-app support information</a></li><li><a href="https://play.google.com/store/apps/details?id=com.kingnewman.enjoybadagry" target="_blank" rel="noopener noreferrer">Download on Google Play</a></li><li><a href="../privacy-policy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Service</a></li><li><a href="#main">Back to top</a></li></ul></div>
+    <div class="footer__col"><h3 class="footer__heading">Get started</h3><ul class="footer__links" role="list"><li><a href="./" aria-current="page">Become a Driver</a></li><li><a href="mailto:support@enjoybadagry.online">support@enjoybadagry.online</a></li><li><a href="../contact/#channels">In-app support information</a></li><li><a href="https://play.google.com/store/apps/details?id=com.kingnewman.enjoybadagry" target="_blank" rel="noopener noreferrer">Download on Google Play</a></li><li><a href="../privacy-policy/">Privacy Policy</a></li><li><a href="../driver-privacy-policy/">Driver Privacy Policy</a></li><li><a href="../driver-terms-and-conditions/">Driver Terms and Conditions</a></li><li><a href="../terms/">Terms of Service</a></li><li><a href="#main">Back to top</a></li></ul></div>
   </div><div class="container footer__bottom"><p>&copy; <span id="year">2026</span> Enjoy Badagry. All rights reserved.</p><p>Badagry · Lagos, Nigeria</p></div></footer>
   <script src="../js/driver.js" defer></script><script src="../js/main.js" defer></script>
 </body>
